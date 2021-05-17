@@ -1,8 +1,10 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.entity;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+
+import com.hust.soict.globalict.miniproject.sort_visualizer.SortVisualizer.ColorManager;
 
 public class Instruction {
 	private final int MARGIN = 35;

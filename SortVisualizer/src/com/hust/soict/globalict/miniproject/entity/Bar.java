@@ -1,4 +1,4 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.entity;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -45,7 +45,7 @@ public class Bar
 	public void clear(Graphics g)
 	{
 		// clear the space
-		g.setColor(ColorManager.BAR_WHITE);
+		g.setColor(new Color(249, 249, 249));
 		g.fillRect(x + MARGIN, y-(25*10), width - MARGIN * 2, 25 * 10);
 	}
 

@@ -1,4 +1,4 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.screen;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -9,7 +9,6 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.Random;
 
 import javax.swing.ButtonGroup;
@@ -26,6 +25,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
+import com.hust.soict.globalict.miniproject.entity.Dialog;
+
 public class MainFrame extends JFrame {
 
 	private JPanel contentPane;
@@ -34,25 +35,7 @@ public class MainFrame extends JFrame {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private boolean isRandom = true;
 	private int array[];
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainFrame frame = new MainFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public MainFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(800, 446);
@@ -63,9 +46,11 @@ public class MainFrame extends JFrame {
 		setJMenuBar(menuBar);
 		
 		JMenu mnNewMenu = new JMenu("Help");
+		mnNewMenu.setFont(new Font("Segoe UI", Font.PLAIN, 16));
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Usage");
+		mntmNewMenuItem.setFont(new Font("Segoe UI", Font.PLAIN, 16));
 		mnNewMenu.add(mntmNewMenuItem);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -1,11 +1,13 @@
-package com.hust.soict.globalict.miniproject;
-
-import java.awt.Graphics;
-import java.awt.image.BufferStrategy;
-import java.util.concurrent.TimeUnit;
-
+package com.hust.soict.globalict.miniproject.sort_visualizer;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferStrategy;
+
+import com.hust.soict.globalict.miniproject.entity.Bar;
+import com.hust.soict.globalict.miniproject.entity.Instruction;
+import com.hust.soict.globalict.miniproject.screen.SortCanvas;
+import com.hust.soict.globalict.miniproject.screen.SortFrame;
 
 public class SortVisualizer {
 	protected static final int PADDING = 20;
@@ -22,6 +24,19 @@ public class SortVisualizer {
 	protected int canvasWidth, canvasHeight;
 	protected volatile boolean isContinue = false;
 	protected volatile boolean isContinuous = false;
+	
+	public static class ColorManager
+	{
+		public static Color BAR_WHITE = new Color(249, 249, 249);
+		public static Color BAR_BLUE = new Color(105, 198, 255);
+		public static Color BAR_CYAN = new Color(160, 246, 255);
+		public static Color BAR_RED = new Color(255, 177, 244);
+		public static Color BAR_YELLOW = new Color(251, 238, 125);
+		public static Color BAR_ORANGE = new Color(255, 177, 51);
+		public static Color BAR_GREEN = new Color(118, 244, 118);
+
+	}
+
 	
 	public SortVisualizer(SortCanvas sortCanvas, SortFrame sortFrame, int array[]) {
 		this.sortFrame = sortFrame;
@@ -232,6 +247,30 @@ public class SortVisualizer {
 	protected void hightlightInstruction(Instruction instruction) {
 		unhighlightIntructions();
 		instruction.hightlight(g);
+		bs.show();	
+	}
+	
+	protected void hightlightInstruction(Instruction instruction1,Instruction instruction2) {
+		unhighlightIntructions();
+		instruction1.hightlight(g);
+		instruction2.hightlight(g);
+		bs.show();	
+	}
+	protected void hightlightInstruction(Instruction instruction1,Instruction instruction2, Instruction instruction3) {
+		unhighlightIntructions();
+		instruction1.hightlight(g);
+		instruction2.hightlight(g);
+		instruction3.hightlight(g);
+		bs.show();	
+	}
+	
+	protected void hightlight_quicksort(Instruction instruction) {
+		instruction.hightlight(g);
+		bs.show();	
+	}
+	
+	protected void unhightlight_quicksort(Instruction instruction) {
+		instruction.unhightlight(g);
 		bs.show();	
 	}
 }

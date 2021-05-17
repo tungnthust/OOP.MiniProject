@@ -1,4 +1,8 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.sort_visualizer;
+
+import com.hust.soict.globalict.miniproject.entity.Instruction;
+import com.hust.soict.globalict.miniproject.screen.SortCanvas;
+import com.hust.soict.globalict.miniproject.screen.SortFrame;
 
 public class BubbleSortVisualizer extends SortVisualizer{
 

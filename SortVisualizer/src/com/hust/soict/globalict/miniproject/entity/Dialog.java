@@ -1,4 +1,4 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.entity;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

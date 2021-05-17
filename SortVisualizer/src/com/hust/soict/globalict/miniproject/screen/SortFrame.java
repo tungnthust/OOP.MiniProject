@@ -1,4 +1,4 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.screen;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,6 +13,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
+import com.hust.soict.globalict.miniproject.sort_visualizer.BubbleSortVisualizer;
+import com.hust.soict.globalict.miniproject.sort_visualizer.InsertionSortVisualizer;
+import com.hust.soict.globalict.miniproject.sort_visualizer.QuickSortVisualizer;
+import com.hust.soict.globalict.miniproject.sort_visualizer.SortVisualizer;
 
 
 public class SortFrame extends JFrame {
@@ -42,7 +47,7 @@ public class SortFrame extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(ColorManager.BAR_WHITE);
+		panel.setBackground(new Color(249, 249, 249));
 		panel.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		panel.setBounds(30, 30, 953, 630);
 		

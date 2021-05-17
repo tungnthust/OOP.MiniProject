@@ -1,6 +1,7 @@
-package com.hust.soict.globalict.miniproject;
+package com.hust.soict.globalict.miniproject.screen;
 
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Graphics;
 
 
@@ -21,7 +22,7 @@ public class SortCanvas extends Canvas {
 
 	public void clear(Graphics g)
 	{
-		g.setColor(ColorManager.CANVAS_BACKGROUND);
+		g.setColor(Color.BLACK);
         g.fillRect(0, 0, getWidth(), getHeight());
 	}
 
